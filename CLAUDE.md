@@ -20,3 +20,17 @@
 4. 回答中注明引用的源码路径和行号（格式：`file_path:line_number`）
 
 不允许在未读源码的情况下直接给出关于 Claude Code 行为的意见。
+
+## 飞书操作规则
+
+以 bot 身份创建飞书文档后，**必须**立即为王朗（open_id: `ou_48ce500f9446f3c2043d5200fd158bef`）授予 `full_access` 权限：
+
+```bash
+lark-cli drive permission.members create \
+  --params '{"token":"<doc_id>","type":"docx","need_notification":"false"}' \
+  --data '{"type":"user","member_type":"openid","member_id":"ou_48ce500f9446f3c2043d5200fd158bef","perm":"full_access","perm_type":"container"}'
+```
+
+## 学习文档索引
+
+项目根目录下有一系列 `learning-*.md` 学习笔记，记录了对 Claude Code 各机制的源码级分析。入口文档为 [`learning-tutorial.md`](./learning-tutorial.md)，其中包含推荐阅读顺序（以记忆机制为主线）及所有文档的索引。
