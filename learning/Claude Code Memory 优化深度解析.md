@@ -1,3 +1,18 @@
+---
+title: "Claude Code Memory 优化深度解析"
+aliases:
+  - "learning-memory-optimization"
+area: learning
+tags: []
+status: evergreen
+source: ""
+source_type: personal-learning-note
+related:
+  - "Claude Code Session Memory 深度解析"
+  - "Claude Code 自动记忆：AI 的项目笔记本"
+  - "CLAUDE.md 编写指南（基于 v2.1.88 源码）"
+---
+
 # Claude Code Memory 优化深度解析
 
 > 参考：https://claudefa.st/blog/guide/mechanics/memory-optimization  
@@ -201,3 +216,9 @@ git checkout HEAD~1 -- CLAUDE.md
 | 最佳用途 | 规范、架构、命令 | 跨 session 连续性 |
 
 `/remember` 命令是两者的桥梁：把 Session Memory 中反复出现的模式提升为 CLAUDE.md 永久规则。
+
+## Related
+
+- [[Claude Code Session Memory 深度解析]]
+- [[Claude Code 自动记忆：AI 的项目笔记本]]
+- [[CLAUDE.md 编写指南（基于 v2.1.88 源码）]]

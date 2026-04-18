@@ -1,3 +1,18 @@
+---
+title: "Multi-Agent 协作机制（基于 v2.1.88 源码）"
+aliases:
+  - "learning-multi-agent"
+area: learning
+tags: []
+status: evergreen
+source: ""
+source_type: personal-learning-note
+related:
+  - "`/simplify` 与 `/batch`：内置多 Agent 工作流命令"
+  - "Ultraplan：Claude Code 云端规划机制深度解析"
+  - "自主 Agent 循环：睡觉时也在发布功能"
+---
+
 # Multi-Agent 协作机制（基于 v2.1.88 源码）
 
 > 所有分析均对应具体源码文件和行号。
@@ -317,3 +332,9 @@ if (effectiveIsolation === 'worktree') {
 | Agent 优先级 | `src/tools/AgentTool/loadAgentsDir.ts` | 193-221 |
 | SendMessage 工具 | `src/tools/SendMessageTool/SendMessageTool.ts` | 全文 |
 | Agent prompt 模板 | `src/tools/AgentTool/prompt.ts` | 66-287 |
+
+## Related
+
+- [[`/simplify` 与 `/batch`：内置多 Agent 工作流命令]]
+- [[Ultraplan：Claude Code 云端规划机制深度解析]]
+- [[自主 Agent 循环：睡觉时也在发布功能]]

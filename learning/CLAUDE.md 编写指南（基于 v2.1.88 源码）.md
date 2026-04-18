@@ -1,3 +1,18 @@
+---
+title: "CLAUDE.md 编写指南（基于 v2.1.88 源码）"
+aliases:
+  - "learning-claudemd"
+area: learning
+tags: []
+status: evergreen
+source: ""
+source_type: personal-learning-note
+related:
+  - "Claude Code Memory 优化深度解析"
+  - "Claude Code Library 系统：跨项目管理 .claude 配置"
+  - "Claude Code 自动记忆：AI 的项目笔记本"
+---
+
 # CLAUDE.md 编写指南（基于 v2.1.88 源码）
 
 > 所有建议均直接对应源码，标注具体文件和行号。
@@ -271,3 +286,9 @@ project/
 | claudeMdExcludes | `src/utils/claudemd.ts` | 547-573 |
 | 目录向上遍历 | `src/utils/claudemd.ts` | 850-934 |
 | 注入格式拼接 | `src/utils/claudemd.ts` | 1153-1195 |
+
+## Related
+
+- [[Claude Code Memory 优化深度解析]]
+- [[Claude Code Library 系统：跨项目管理 .claude 配置]]
+- [[Claude Code 自动记忆：AI 的项目笔记本]]

@@ -1,3 +1,18 @@
+---
+title: "Claude Code Session Memory 深度解析"
+aliases:
+  - "learning-session-memory"
+area: learning
+tags: []
+status: evergreen
+source: ""
+source_type: personal-learning-note
+related:
+  - "Claude Code Memory 优化深度解析"
+  - "Claude Code 自动记忆：AI 的项目笔记本"
+  - "Claude Code 梦境机制：Anthropic 的新记忆功能"
+---
+
 # Claude Code Session Memory 深度解析
 
 > 参考：https://claudefa.st/blog/guide/mechanics/session-memory  
@@ -175,3 +190,9 @@ Recalled 3 memories (ctrl+o to expand)
 - 提取是**串行化**的（`sequential()` 包装），同时只能有一个提取在运行
 - Remote 模式（SSH 远程会话）下 Session Memory **不启用**
 - 子 agent、teammate 等非主线程查询**不触发** Session Memory 提取
+
+## Related
+
+- [[Claude Code Memory 优化深度解析]]
+- [[Claude Code 自动记忆：AI 的项目笔记本]]
+- [[Claude Code 梦境机制：Anthropic 的新记忆功能]]

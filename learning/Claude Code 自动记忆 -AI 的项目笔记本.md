@@ -1,3 +1,18 @@
+---
+title: "Claude Code 自动记忆：AI 的项目笔记本"
+aliases:
+  - "learning-auto-memory"
+area: learning
+tags: []
+status: evergreen
+source: ""
+source_type: personal-learning-note
+related:
+  - "Claude Code Session Memory 深度解析"
+  - "Claude Code 梦境机制：Anthropic 的新记忆功能"
+  - "CLAUDE.md 编写指南（基于 v2.1.88 源码）"
+---
+
 # Claude Code 自动记忆：AI 的项目笔记本
 
 Claude Code 自动记忆功能让 Claude 自己给项目写笔记。了解它的工作原理、文件位置，以及何时用它 vs CLAUDE.md。
@@ -11,7 +26,7 @@ Claude Code 自动记忆功能让 Claude 自己给项目写笔记。了解它的
 ls ~/.claude/projects/
 ```
 
-如果你看到目录，Claude 已经有笔记了。如果记忆文件经过多次 session 后变得杂乱，可以了解 [Auto Dream](./learning-auto-dream.md)——它会周期性地清理和重组自动记忆写入的所有内容。
+如果你看到目录，Claude 已经有笔记了。如果记忆文件经过多次 session 后变得杂乱，可以了解 [[Claude Code 梦境机制：Anthropic 的新记忆功能]]——它会周期性地清理和重组自动记忆写入的所有内容。
 
 ---
 
@@ -193,3 +208,9 @@ export CLAUDE_CODE_DISABLE_AUTO_MEMORY=0  # 强制开启
 ## 来源
 
 原文：https://claudefa.st/blog/guide/mechanics/auto-memory
+
+## Related
+
+- [[Claude Code Session Memory 深度解析]]
+- [[Claude Code 梦境机制：Anthropic 的新记忆功能]]
+- [[CLAUDE.md 编写指南（基于 v2.1.88 源码）]]
