@@ -44,3 +44,8 @@ Claude Code 机制学习索引，按主题组织源码分析与使用经验。
 - [[Thread-Based Engineering：量化 AI 辅助开发效率]]
 - [[Ralph Wiggum 技术：让 Agent 在你睡觉时发布功能]]
 - [[Claude Code 源码泄露：512K 行代码里发现了什么]]
+
+## 最佳实践
+
+- [[agentic-engineering-best-practices]] — 5 大 Agentic 工程技巧（PRD、模块化规则、命令化等）
+- [[opus-4-7-best-practices]] — Opus 4.7 字面主义与 Effort 级别策略

@@ -1,7 +1,7 @@
 ---
-title: "Papers Index"
+title: Papers Index
 aliases:
-  - "papers-index"
+  - papers-index
 area: papers
 tags: []
 status: evergreen

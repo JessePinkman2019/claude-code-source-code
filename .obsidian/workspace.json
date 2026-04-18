@@ -4,24 +4,59 @@
     "type": "split",
     "children": [
       {
-        "id": "3f5740dfc40e4869",
+        "id": "9a6ef473abc9557b",
         "type": "tabs",
         "children": [
           {
-            "id": "640a120fbf42118d",
+            "id": "9522c7d3cde6aacf",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
+            }
+          }
+        ]
+      },
+      {
+        "id": "f1aa385529e27de4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dfc77823c71614c7",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
               "state": {
-                "file": "Claude Knowledge Vault.canvas",
-                "viewState": {
-                  "x": 1102.0835131744043,
-                  "y": 493.18670012547165,
-                  "zoom": -0.865389824005279
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 1.238151748327895,
+                  "close": false
                 }
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "Claude Knowledge Vault"
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
             }
           }
         ]
@@ -97,7 +132,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Claude Knowledge Vault.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -107,7 +141,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Claude Knowledge Vault 的反向链接列表"
+              "title": "反向链接"
             }
           },
           {
@@ -185,11 +219,21 @@
       "bases:新建数据库": false
     }
   },
-  "active": "640a120fbf42118d",
+  "active": "0d7ce26f9fb220df",
   "lastOpenFiles": [
-    "learning/自主 Agent 循环 -睡觉时也在发布功能.md",
-    "learning/输出格式与文件变更审批 -d e y n 四个快捷键.md",
+    "meeting/Meeting Index.md",
+    "Home.md",
     "Claude Knowledge Vault.canvas",
-    "CLAUDE.md"
+    "CLAUDE.md",
+    "README_CN.md",
+    "papers/Papers Index.md",
+    "learning/opus-4-7-best-practices.md",
+    "docs/en/01-telemetry-and-privacy.md",
+    "learning/Claude Code Library 系统 -跨项目管理 .claude 配置.md",
+    "learning/Claude Code Memory 优化深度解析.md",
+    "learning/Learning Index.md",
+    "learning/Claude Code Interactive Mode -快捷键、命令与隐藏功能完整参考.md",
+    "learning/自主 Agent 循环 -睡觉时也在发布功能.md",
+    "learning/输出格式与文件变更审批 -d e y n 四个快捷键.md"
   ]
 }

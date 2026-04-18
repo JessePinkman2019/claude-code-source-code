@@ -1,3 +1,25 @@
+---
+title: "Bootstrapping Agents & Token Economics"
+aliases:
+  - bootstrapping-agents
+  - token-economics
+area: meeting
+tags:
+  - meeting
+  - rl
+  - bootstrapping
+  - token-efficiency
+  - kv-cache
+  - agent
+date: 2026-04-17
+speakers:
+  - 宋博（Song Yan）
+  - 邓博（Deng Cheng）
+related:
+  - "[[Effective Context Engineering for AI Agents]]"
+  - "[[Building Effective AI Agents]]"
+---
+
 # 智能体研究分享：Bootstrapping Agents & Token Economics
 
 **时间**：2026-04-17  
