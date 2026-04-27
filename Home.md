@@ -14,6 +14,7 @@ status: evergreen
 
 ## 目录
 
+- [[Agents Index]] — Agent 编排、Agent Teams、自定义 agent
 - [[Learning Index]] — Claude Code 机制与最佳实践
 - [[Engineering Index]] — Anthropic 工程博客摘要
 - [[Papers Index]] — AI 研究论文与报告
@@ -34,6 +35,16 @@ status: evergreen
 - [[agentic-engineering-best-practices]]
 - [[Multi-Agent 协作机制（基于 v2.1.88 源码）]]
 - [[Scaling Managed Agents - Decoupling the Brain from the Hands]]
+
+### Agent 编排（claudefa.st 系列）
+#agents #orchestration #agent-teams
+
+- [[Agent-Fundamentals]] — Sub-agent 基础与 Task tool
+- [[Agent-Patterns]] — 六种编排模式
+- [[Team-Orchestration]] — Builder-Validator 配对
+- [[Agent-Teams]] — 原生多 Agent 协作（实验性）
+- [[Agent-Teams-Workflow]] — 端到端生产构建流程
+- [[Custom-Agents]] — 自定义 agent 与 slash commands
 
 ### Context 与记忆
 #context #memory #kv-cache

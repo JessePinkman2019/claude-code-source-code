@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>王朗 - 大模型 Infra / AI Agent 工程化 / 推理基础设施工程师</title>
+  <style>
+    @page { size: A4; margin: 8mm; }
+    * { box-sizing: border-box; }
+    :root {
+      --ink: #15171a;
+      --muted: #555d66;
+      --subtle: #87909b;
+      --line: #d7dce2;
+      --panel: #f5f7fa;
+      --accent: #0f4c81;
+      --accent-2: #1d6f63;
+    }
+    html, body { margin: 0; padding: 0; background: #e8eaed; color: var(--ink); }
+    body {
+      font-family: "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", "STSong", serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      background: #fff;
+      padding: 8mm 9mm 7mm;
+      position: relative;
+      overflow: hidden;
+    }
+    .page::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 4.2mm;
+      height: 100%;
+      background: linear-gradient(180deg, var(--accent), #10202e 55%, var(--accent-2));
+    }
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8mm;
+      align-items: end;
+      border-bottom: 1.4px solid var(--ink);
+      padding: 0 0 3.2mm 0;
+      margin-left: 2mm;
+    }
+    h1 {
+      margin: 0;
+      font-family: "Noto Sans CJK SC", "Source Han Sans SC", "PingFang SC", sans-serif;
+      font-size: 23pt;
+      letter-spacing: 0.08em;
+      line-height: 1;
+      font-weight: 800;
+    }
+    .role {
+      margin-top: 2.2mm;
+      font-family: "Noto Sans CJK SC", "PingFang SC", sans-serif;
+      font-size: 9.2pt;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .signal {
+      display: flex;
+      gap: 2mm;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      max-width: 60mm;
+      font-family: "Noto Sans CJK SC", "PingFang SC", sans-serif;
+    }
+    .chip {
+      border: 1px solid var(--line);
+      padding: 1.1mm 2mm;
+      font-size: 6.6pt;
+      color: var(--muted);
+      background: #fafbfc;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+    main {
+      margin-left: 2mm;
+      display: grid;
+      grid-template-columns: 45mm 1fr;
+      gap: 5mm;
+      padding-top: 4mm;
+    }
+    aside {
+      border-right: 1px solid var(--line);
+      padding-right: 4mm;
+    }
+    section { margin: 0 0 3.2mm; }
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 2mm;
+      margin: 0 0 1.8mm;
+      font-family: "Noto Sans CJK SC", "PingFang SC", sans-serif;
+      font-size: 8pt;
+      letter-spacing: 0.16em;
+      font-weight: 800;
+      color: var(--accent);
+      text-transform: uppercase;
+    }
+    .section-title::before {
+      content: "";
+      width: 3.5mm;
+      height: 1.2px;
+      background: currentColor;
+    }
+    .summary {
+      font-size: 7.6pt;
+      line-height: 1.56;
+      color: #25292e;
+      text-align: justify;
+      margin: 0;
+    }
+    .edu-item { margin-bottom: 2.3mm; }
+    .edu-school {
+      font-family: "Noto Sans CJK SC", "PingFang SC", sans-serif;
+      font-size: 7.6pt;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+    .edu-meta {
+      font-size: 6.8pt;
+      line-height: 1.45;
+      color: var(--muted);
+      margin-top: .4mm;
+    }
+    .skills {
+      display: flex;
+      flex-direction: column;
+      gap: 1.7mm;
+    }
+    .skill-block {
+      padding: 1.8mm 2mm;
+      background: var(--panel);
+      border-left: 2px solid var(--accent);
+    }
+    .skill-name {
+      font-family: "Noto Sans CJK SC", "PingFang SC", sans-serif;
+      font-size: 6.8pt;
+      font-weight: 800;
+      margin-bottom: .8mm;
+    }
+    .skill-text {
+      font-size: 6.45pt;
+      line-height: 1.43;
+      color: var(--muted);
+    }
+    .company {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2mm;
+      padding-bottom: 1.5mm;
+      border-bottom: 1px solid var(--line);
+    }
+    .company h2 {
+      margin: 0;
+      font-family: "Noto Sans CJK SC", "PingFang SC", sans-serif;
+      font-size: 10pt;
+      font-weight: 900;
+      letter-spacing: .04em;
+    }
+    .time {
+      font-family: "Noto Sans CJK SC", "PingFang SC", sans-serif;
+      font-size: 7.2pt;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .project {
+      margin-bottom: 3.1mm;
+      break-inside: avoid;
+    }
+    .project-title {
+      display: flex;
+      align-items: center;
+      gap: 2mm;
+      margin-bottom: 1.1mm;
+      font-family: "Noto Sans CJK SC", "PingFang SC", sans-serif;
+      font-size: 8.2pt;
+      font-weight: 900;
+      color: #101418;
+    }
+    .project-title::before {
+      content: "";
+      width: 2.2mm;
+      height: 2.2mm;
+      background: var(--accent);
+      transform: rotate(45deg);
+      flex: 0 0 auto;
+    }
+    ul {
+      margin: 0;
+      padding-left: 3.8mm;
+    }
+    li {
+      font-size: 7.12pt;
+      line-height: 1.43;
+      margin: 0 0 .75mm;
+      color: #24282d;
+      padding-left: .4mm;
+    }
+    li::marker { color: var(--accent); font-size: .85em; }
+    strong, .metric {
+      font-family: "Noto Sans CJK SC", "PingFang SC", sans-serif;
+      font-weight: 900;
+      color: #0b3c66;
+    }
+    code {
+      font-family: "SFMono-Regular", "Menlo", monospace;
+      font-size: 0.92em;
+      color: #17324d;
+      background: #eef3f7;
+      padding: 0 .7mm;
+      border-radius: 1mm;
+    }
+    .agent .project-title::before { background: var(--accent-2); }
+    .agent .metric { color: var(--accent-2); }
+    @media print {
+      html, body { background: white; }
+      .page { margin: 0; box-shadow: none; width: auto; min-height: auto; }
+    }
+  </style>
+</head>
+<body>
+  <article class="page">
+    <header>
+      <div>
+        <h1>王朗</h1>
+        <div class="role">大模型 Infra / AI Agent 工程化 / 推理基础设施工程师</div>
+      </div>
+      <div class="signal">
+        <span class="chip">LLM Inference</span>
+        <span class="chip">AI Agent Harness</span>
+        <span class="chip">GPU / NPU</span>
+        <span class="chip">CUDA Kernel</span>
+      </div>
+    </header>
+
+    <main>
+      <aside>
+        <section>
+          <h3 class="section-title">Profile</h3>
+          <p class="summary">近两年专注大模型 Infra、推理基础设施与 AI Agent 工程化，参与 MindGPT、MindVLA、LisaRT 等核心项目研发与交付。Vibe Coding 分享者与拥护者，系统实践 Claude Code / Managed Agents / long-running harness，将工程师角色从直接编码扩展为 Agent 监督者与 Harness 设计者。熟悉 TensorRT-LLM、TensorRT、CUTLASS、FlashInfer、DeepGEMM、cuDNN Frontend，具备 GPU/NPU 架构优化、模型评估、引擎拉通、算子优化、精度对齐、性能评测与稳定性排障经验。</p>
+        </section>
+
+        <section>
+          <h3 class="section-title">Education</h3>
+          <div class="edu-item">
+            <div class="edu-school">中国科学院大学</div>
+            <div class="edu-meta">网络空间安全学院｜硕士研究生<br/>高性能计算方向｜2021.09 - 2024.06</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-school">北京信息科技大学</div>
+            <div class="edu-meta">计算机科学与技术｜本科<br/>2015.09 - 2019.06</div>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="section-title">Skills</h3>
+          <div class="skills">
+            <div class="skill-block">
+              <div class="skill-name">推理基础设施</div>
+              <div class="skill-text">LisaRT / TensorRT-LLM / TensorRT / SGLang / TRT engine / 精度对齐 / 稳定性排障 / barrier removal</div>
+            </div>
+            <div class="skill-block">
+              <div class="skill-name">CUDA / 算子优化</div>
+              <div class="skill-text">CUTLASS / DeepGEMM / FlashInfer / cuDNN Frontend / cuBLASLt / CUDA Graph / TM 地址分配</div>
+            </div>
+            <div class="skill-block">
+              <div class="skill-name">AI Agent 工程化</div>
+              <div class="skill-text">Vibe Coding / Claude Code / Managed Agents / Planner-Generator-Evaluator / Memory / Skills / Subagents / 自动评测闭环</div>
+            </div>
+            <div class="skill-block">
+              <div class="skill-name">性能分析</div>
+              <div class="skill-text">Nsight Compute / simpleperf / cutlass_profiler / roofline / occupancy / NUMA / NCCL</div>
+            </div>
+          </div>
+        </section>
+      </aside>
+
+      <div>
+        <section>
+          <h3 class="section-title">Experience</h3>
+          <div class="company">
+            <h2>理想汽车｜AI 引擎 / 大模型 Infra</h2>
+            <div class="time">2024.07 - 至今</div>
+          </div>
+
+          <div class="project agent">
+            <div class="project-title">AI Agent / Vibe Coding 工程化与技术分享</div>
+            <ul>
+              <li>Vibe Coding 分享者与拥护者，围绕 Claude Code 工作流、上下文工程、CLAUDE.md / Memory / Skills / Subagents、Plan Mode、worktree 隔离、提示词工程等主题沉淀方法论，推动团队从“使用 AI 编码”升级为“设计 Harness 管理 Agent”。</li>
+              <li>设计面向长时间系统优化任务的 Agent Harness，将 Planner、Generator、Evaluator、Memory 解耦，通过多 worktree 并行探索、独立评估、session log 持久化和自动化回归验证支持复杂优化持续收敛。</li>
+              <li>VLIW-SIMD 优化实验：通过多 Agent 竞争 + Perf Agent trace 评估 + 增量融合，将 cycles 从 <span class="metric">147,734 降至 1,391</span>，取得 <span class="metric">106.2x</span> 加速，超过 Claude Opus 4.5 发布时最佳记录 1,487 cycles。</li>
+              <li>AI Agent 主导 H800 dense attention forward kernel 优化，Round 17 latency 达到 <span class="metric">0.303ms</span>，超过 FlashInfer 0.6.8 baseline <span class="metric">0.311ms</span>。</li>
+            </ul>
+          </div>
+
+          <div class="project">
+            <div class="project-title">MindGPT3.x 大模型推理基础设施优化</div>
+            <ul>
+              <li>参与 MindGPT3.0 / 3.1 推理基础设施优化，覆盖 MOE、MLA、GEMM、Attention、Sampling、内存稳定性等关键链路，支撑大模型推理性能与线上稳定性提升。</li>
+              <li>分析 TensorRT-LLM MOE 流程并接入 deep-groupgemm，group GEMM kernel 相比 CUTLASS 版本加速约 <span class="metric">55%</span>；MOE 前处理从 <span class="metric">14ms 降至 279us</span>，后处理从 <span class="metric">3ms 降至 339us</span>。</li>
+              <li>优化 MOE prefill：TP16 场景从 <span class="metric">712ms 降至 612ms</span>，加速 16.3%；EP16 场景从 <span class="metric">484ms 降至 434ms</span>，加速 11.5%。</li>
+              <li>基于 FlashInfer 优化采样层：非投机采样从 <span class="metric">2.21ms 降至 0.11ms</span>，decode 吞吐从 <span class="metric">78.37 提升至 96.15 token/s</span>；投机采样最高加速约 70%。</li>
+              <li>使用 cutlass_profiler 调优高 batch GEMM，取得 <span class="metric">50%~70%</span> GEMM 性能收益；定位 NCCL 版本导致的 CPU 内存泄漏并完成 A800 / H800 / H100 24 小时压测验证。</li>
+            </ul>
+          </div>
+
+          <div class="project">
+            <div class="project-title">MindVLA 端云推理能力建设与交付</div>
+            <ul>
+              <li>负责 MindVLA 端云推理链路拉通与优化，覆盖模型选型、TRT engine 转换、精度对齐、稳定性排查和跨团队交付。</li>
+              <li>优化云侧 MambaViT / Hybrid ViT，从初版 NHWC 拉通 <span class="metric">33.0ms 优化至 7.25ms</span>，性能优于未开 CUDA Graph 的 TensorRT（7.25ms vs 7.5ms）。</li>
+              <li>2k batch2 场景完成 Hybrid-ViT Mamba TRT 拉通与优化，P95 TTFT 达到 <span class="metric">105ms</span>，优于 1k ViT 方案 114ms。</li>
+              <li>定位 NUMA 导致的推理波动，将单算子波动指数从 <span class="metric">7.44 降至 0.42</span>，下降 94.35%；单路 TTFT 波动指数从 <span class="metric">18.07 降至 3.41</span>，下降 81.13%。</li>
+              <li>支撑端侧 MindViT 选型与调优，使 OrinX 从 <span class="metric">15.2ms 降至 11.1ms</span>，ThorU 从 <span class="metric">9.3ms 降至 8.1ms</span>。</li>
+            </ul>
+          </div>
+
+          <div class="project">
+            <div class="project-title">M100 MoE2.0 / Attention 同步优化与 TM 地址分配</div>
+            <ul>
+              <li>参与 M100 MoE2.0 Attention 层适配与同步优化，将 barrier 同步逐步改造为信号量同步，完成关键 barrier removal，推动初版有效 token 输出与 Golden bit-wise 对齐，并进入指令并行执行优化阶段。</li>
+              <li>设计基于生命周期冲突图与贪心装箱的 TM 基址生成方法，建模 loop transient / persistent 生命周期、良性/恶性踩踏、非 in-place 约束和 allowed overlaps，在 2MB Tile Memory 约束下自动生成变量起始地址。</li>
+              <li>编写 barrier-removal harness，用于约束 Claude Code 移除 barrier 的工作流，沉淀从观测、假设、修改到 bit-wise 验证的同步优化流程。</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
+  </article>
+</body>
+</html>
